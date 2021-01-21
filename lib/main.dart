@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 //import 'package:barcode_widget/barcode_widget.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
@@ -76,14 +77,17 @@ class _MyHomePageState extends State<MyHomePage> {
               //   onClicked: () => addScannedQRCode(),
               // ),
               ListView.builder(
+                  scrollDirection: Axis.vertical,
                   shrinkWrap: true,
                   itemCount: item.length == 0 ? 0 : item.length,
                   itemBuilder: (context, index) {
-                    return Text(item[index],
-                        style: TextStyle(
-                          color: Colors.white,
-                        ));
-                  })
+                    return Card(
+                      child: Text(item[index],
+                          style: TextStyle(
+                            color: Colors.white,
+                          )),
+                    );
+                  }),
             ],
           ),
         ),
