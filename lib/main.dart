@@ -86,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Text(
                         item[index],
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                         ),
                       ),
                     );
