@@ -36,6 +36,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   String qrCode = '';
   List<String> item = [];
+  //List<String> uniqueItems = [];
   String temp;
   @override
   Widget build(BuildContext context) {
@@ -82,10 +83,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   itemCount: item.length == 0 ? 0 : item.length,
                   itemBuilder: (context, index) {
                     return Card(
-                      child: Text(item[index],
-                          style: TextStyle(
-                            color: Colors.white,
-                          )),
+                      child: Text(
+                        item[index],
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
                     );
                   }),
             ],
@@ -99,15 +102,14 @@ class _MyHomePageState extends State<MyHomePage> {
     try {
       qrCode = await FlutterBarcodeScanner.scanBarcode(
           '#ff6666', 'Cancel', true, ScanMode.QR);
-      //List item = [];
-      if (!mounted) return;
-      setState(() {
-        // this.qrCode = qrCode;
-        // if( qrCode !='')
-        item.add(qrCode);
-        //print(item.length);
-        //this.item = item.map((e) => qrCode).toList();
-      });
+      if (item.contains(qrCode)) {
+        print('Its repeated');
+      } else {
+        if (!mounted) return;
+        setState(() {
+          item.add(qrCode);
+        });
+      }
     } on PlatformException {
       qrCode = 'Failed to get platform version';
       item = ['no items'];
