@@ -78,6 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
               //   onClicked: () => addScannedQRCode(),
               // ),
               ListView.builder(
+                  padding: EdgeInsets.all(8.0),
                   scrollDirection: Axis.vertical,
                   shrinkWrap: true,
                   itemCount: item.length == 0 ? 0 : item.length,
@@ -87,6 +88,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         item[index],
                         style: TextStyle(
                           color: Colors.black,
+                          fontSize: 23.0,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     );
