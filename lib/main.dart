@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-//import 'package:barcode_widget/barcode_widget.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import 'package:flutter_scanner/button_widget.dart';
@@ -73,10 +72,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       'The result is ' + qrCode,
                       style: TextStyle(color: Colors.white54, fontSize: 18.0),
                     ),
-              // ButtonWidget(
-              //   text: 'Scan More',
-              //   onClicked: () => addScannedQRCode(),
-              // ),
               ListView.builder(
                   padding: EdgeInsets.all(8.0),
                   scrollDirection: Axis.vertical,
@@ -122,5 +117,3 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 }
-
-Future<void> addScannedQRCode() async {}
