@@ -58,7 +58,9 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               ButtonWidget(
                 text: 'Scan QR Code',
-                onClicked: () => scanQRCode(),
+                onClicked: () {
+                  scanQRCode();
+                },
               ),
               SizedBox(
                 height: 10.0,
