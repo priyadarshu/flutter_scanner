@@ -3,7 +3,7 @@
 A new Flutter project.
 
 This is a simple scanner app, that helps to scan the QR Codes
-It uses the package -  from pubdev
+It uses the package - [flutter_barcode_scanner from pubdev](https://pub.dev/packages/barcode_scanner)
 
 ## Getting Started
 
