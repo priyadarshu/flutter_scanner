@@ -2,6 +2,9 @@
 
 A new Flutter project.
 
+This is a simple scanner app, that helps to scan the QR Codes
+It uses the package -  from pubdev
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
